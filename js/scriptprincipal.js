@@ -5,7 +5,7 @@ const Bot_Avancar = document.getElementById("nextSlide");
 const Moldura = document.getElementById("Moldura");
 
 // Define o intervalo de tempo para mudar as imagens (3 segundos)
-const tempo = 1000;
+const tempo = 3000;
 
 // Define a lista de imagens e o índice inicial
 var imagens = ["Carrosel1", "Carrossel2", "Carrossel3"];
