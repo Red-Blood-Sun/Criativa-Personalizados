@@ -41,7 +41,7 @@ function pausaIntervalo() {
 
 // Função para mudar a imagem exibida
 function MudaImagem(indice) {
-    Moldura.src = `../img/${imagens[indice]}.png`;
+    Moldura.src = `img/${imagens[indice]}.png`;
 }
 
 // Função para avançar para a próxima imagem e reiniciar o intervalo
@@ -102,7 +102,7 @@ var listafig = document.getElementsByTagName("figcaption");
 
 // Define o modo padrão como "escuro" e ajusta o botão de modo
 var modo = "claro";
-btnModo.style.backgroundImage = 'url(../img/icone_claro.png)';
+btnModo.style.backgroundImage = 'url(img/icone_claro.png)';
 
 // Define a função a ser chamada quando o botão de modo é clicado
 btnModo.onclick = MudarModo;
@@ -131,7 +131,7 @@ function MudaParaModoClaro(corTextos, corFundoPrincipal)
 
 function MudaParaUmDeterminadoModo(corTextos, corFundoPrincipal, novoModo)
 {
-    btnModo.style.backgroundImage = `url(../img/icone_${novoModo}.png)`;
+    btnModo.style.backgroundImage = `url(img/icone_${novoModo}.png)`;
     
     MudaCorDosElementos(listafig, corTextos);
     MudaCorDosElementos(infos, corTextos);
@@ -162,17 +162,17 @@ btnModo.onmouseover = MudarFundoVindoDeFora;
 // Função para alterar a aparência do botão ao passar o mouse sobre ele
 function MudarFundoVindoDeFora() {
     if (modo == "claro") {
-        btnModo.style.backgroundImage = 'url(../img/icone_escuro.png)';
+        btnModo.style.backgroundImage = 'url(img/icone_escuro.png)';
     } else {
-        btnModo.style.backgroundImage = 'url(../img/icone_claro.png)';
+        btnModo.style.backgroundImage = 'url(img/icone_claro.png)';
     }
 }
 
 // Função para restaurar a aparência do botão ao retirar o mouse de cima dele
 function MudarFundoSaindoDeDentro() {
     if (modo == "claro") {
-        btnModo.style.backgroundImage = 'url(../img/icone_claro.png)';
+        btnModo.style.backgroundImage = 'url(img/icone_claro.png)';
     } else {
-        btnModo.style.backgroundImage = 'url(../img/icone_escuro.png)';
+        btnModo.style.backgroundImage = 'url(img/icone_escuro.png)';
     }
 }
