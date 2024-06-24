@@ -1,0 +1,246 @@
+@charset "utf-8";
+
+/* Estilos Gerais */
+* {
+    box-sizing: border-box; /* Define box-sizing como border-box para todos os elementos */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    scroll-behavior: smooth; /*Adiciona rolagem suave*/
+}
+
+body {
+    background-color: #b7b3b317; /* Define a cor de fundo do corpo */
+    font-family: serif; /* Define a fonte padrão para o corpo */
+}
+
+/* Cabeçalho */
+.Cabeçalho {
+    display: flex; /* Define um contêiner flexível */
+    justify-content: end; /* Alinha o conteúdo à direita */
+}
+
+.Cabeçalho figure img {
+    width: 100%; /* Define a largura da imagem como 100% do contêiner */
+    height: 100%; /* Define a altura da imagem como 100% do contêiner */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Categorias */
+.Categorias {
+    background-color: rgba(153, 207, 222, 0.766); /* Define a cor de fundo */
+    margin: 0; /* Remove a margem */
+    padding: 10px; /* Adiciona padding */
+    font-size: larger; /* Define um tamanho de fonte maior */
+    display: flex; /* Utiliza flexbox para o layout */
+    justify-content: center; /* Centraliza os itens */
+    list-style: none; /* Remove os marcadores de lista */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.Categorias li {
+    margin: 0 20px; /* Adiciona margem horizontal entre os itens */
+}
+
+.Categorias a {
+    text-decoration: none; /* Remove a decoração do texto */
+    color: rgb(42, 27, 27); /* Define a cor do texto */
+    font-family: "Playwrite NG Modern", cursive; /* Define a fonte */
+    font-size: 20px; /* Define o tamanho da fonte */
+}
+
+/* Carrossel */
+.carrossel {
+    position: relative; /* Define a posição como relativa */
+    overflow: hidden; /* Oculta o conteúdo que excede os limites */
+    width: 100%; /* Define a largura máxima do carrossel */
+    margin: 0 auto; /* Centraliza o carrossel horizontalmente */
+}
+
+.slide {
+    margin: 0; /* Remove a margem */
+    padding: 0; /* Remove o padding */
+    width: 100%; /* Define a largura total do slide */
+    height: auto; /* Ajusta a altura automaticamente */
+    overflow: hidden; /* Evita que a imagem ultrapasse os limites */
+}
+
+.slide img {
+    width: 100%; /* Define a largura total da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaços em branco sob a imagem */
+}
+
+/* Botão de Modo */
+#btnModo {
+    margin: 10px; /* Adiciona uma margem */
+    position: absolute; /* Define a posição como absoluta */
+    background: none; /* Remove o fundo */
+    border: none; /* Remove a borda */
+    width: 32px; /* Define a largura */
+    height: 32px; /* Define a altura */
+    background-image: url(../img/icone_claro.png); /* Define a imagem de fundo */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-position: center; /* Centraliza a imagem */
+    transition: background-image 0.3s ease; /* Adiciona uma transição suave ao mudar a imagem */
+}
+
+/* Botões do Carrossel */
+.botoes {
+    position: absolute; /* Define a posição como absoluta */
+    top: 50%; /* Posiciona no meio verticalmente */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    width: 100%; /* Define a largura total */
+    display: flex; /* Utiliza flexbox para o layout */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    padding: 10px; /* Adiciona padding */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+}
+
+.botao1, .botao2 {
+    width: 32px; /* Define a largura */
+    height: 32px; /* Define a altura */
+    background: none; /* Remove o fundo */
+    border: none; /* Remove a borda */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-position: center; /* Centraliza a imagem */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave à transformação */
+}
+
+.botao1 {
+    background-image: url(../img/seta_esquerda.png); /* Define a imagem de fundo */
+}
+
+.botao2 {
+    background-image: url(../img/seta_direita.png); /* Define a imagem de fundo */
+}
+
+.botao1:hover, .botao2:hover {
+    transform: scale(1.25); /* Aumenta a escala ao passar o mouse */
+}
+
+/* Título do Produto */
+.titulo_produto {
+    background-color: rgb(255, 255, 255); /* Define a cor de fundo */
+    color: rgb(42, 27, 27); /* Define a cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 40px; /* Define o tamanho da fonte */
+    pointer-events: none; /* Desativa eventos de ponteiro */
+    margin: 0; /* Remove a margem */
+    padding: 20px; /* Adiciona padding */
+    font-family: "Ovo", serif; /* Define a fonte */
+}
+
+/* Catálogo de Produtos */
+.Catalogo {
+    max-width: 100%; /* Define a largura máxima */
+    display: flex; /* Utiliza flexbox */
+    flex-wrap: wrap; /* Permite a quebra de linha dos itens */
+    justify-content: space-evenly; /* Espaça os itens igualmente */
+    width: 1080px; /* Define a largura */
+    margin: 10px auto; /* Centraliza o catálogo horizontalmente */
+}
+
+.artigo_produto {
+    margin: 8px; /* Adiciona uma margem */
+    flex: 0 1 250px; /* Define o tamanho flexível dos itens */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave à transformação */
+}
+
+.artigo_produto:hover {
+    transform: translateY(-5px); /* Move o item para cima ao passar o mouse */
+}
+
+.artigo_produto figcaption{
+    text-align: center;
+    font-size: 20px;
+    margin: 8px;
+    font-family: "Ovo", serif; /* Define a fonte */
+}
+
+/* Produto */
+.produto {
+    padding: 0; /* Remove o padding */
+}
+
+.produto img {
+    width: 100%; /* Define a largura total da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave à transformação */
+}
+
+.produto:hover img {
+    transform: scale(1.05); /* Aumenta a escala da imagem ao passar o mouse */
+}
+
+/* Rodapé */
+.rodape {
+    background-color: rgba(241, 164, 201, 0.766); /* Define a cor de fundo */
+    color: rgb(82, 65, 65); /* Define a cor do texto */
+    font-size: 19px; /* Define o tamanho da fonte */
+    max-width: 100%; /* Define a largura máxima */
+    padding: 20px; /* Adiciona padding */
+}
+
+.rodape_menu {
+    display: flex; /* Utiliza flexbox para o layout */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    align-items: baseline; /* Alinha os itens à linha de base */
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 30px; /* Adiciona padding */
+    margin: 0; /* Remove a margem */
+}
+
+.rodape_menu li {
+    flex: 1; /* Define a flexibilidade dos itens */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.rodape_menu p {
+    text-align: center; /* Alinha o texto ao centro */
+    margin: 0; /* Remove a margem */
+    font-size: 15px; /* Define o tamanho da fonte */
+    color: rgba(82, 65, 65); /* Define a cor do texto */
+}
+
+.rodape_menu li a {
+    color: rgba(82, 65, 65); /* Define a cor do texto */
+    margin: 6px; /* Adiciona margem */
+    font-size: 15px; /* Define o tamanho da fonte */
+}
+
+#descricao{
+    text-align: justify;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 900px) {
+    .rodape_menu {
+        flex-direction: column; /* Muda a direção do layout para coluna */
+        align-items: center; /* Centraliza os itens */
+        gap: 20px; /* Adiciona espaço entre os itens */
+    }
+    .rodape_menu li {
+        font-size: 30px; /* A
+
+umenta o tamanho da fonte dos itens */
+    }
+    .rodape_menu li p, .rodape_menu li a {
+        font-size: 25px; /* Aumenta o tamanho da fonte do texto e links */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .artigo_produto {
+        flex: 0 1 390px; /* Altera a flexibilidade dos itens */
+    }
+    .Categorias {
+        flex-direction: column; /* Muda a direção do layout para coluna */
+        align-items: center; /* Centraliza os itens */
+        gap: 10px; /* Adiciona espaço entre os itens */
+    }
+}
